@@ -11,6 +11,10 @@ namespace lesson_18
     {
         public Circle() { }
         public Circle(string Name): base(Name) { }
+        public override void Draw()
+        {
+            Console.WriteLine("Drawing {0} the Circle", PetName);
+        }
     }
 
     

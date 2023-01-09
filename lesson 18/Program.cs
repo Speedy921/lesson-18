@@ -1,9 +1,25 @@
 ﻿using lesson_18;
 
 Console.WriteLine("********Fun with Polymorhism*****\n");
-Hexagon hex = new Hexagon("Beth");
-hex.Draw();
-Circle cir = new Circle("Cindy");
-//викликає реалізацію базового класу
-cir.Draw();
+
+//зробимо массив сумісних з Shape обьектів
+Sharpe[] myShapes = {new Hexagon(), new Circle(), new Hexagon("Mick"), new Circle("Beth"), new Hexagon("Linda") };
+
+//пройдемо у циклі по усім елементам та провзаємодієм 
+//з поліморфним інтерфейсом
+foreach(Sharpe s in myShapes)
+{
+    s.Draw();
+}
+
+Console.ReadLine();
+
+//приховування членів
+//тут викликається метод Draw() классу ThreeDCircle
+ThreeDCircle o = new ThreeDCircle();
+o.Draw();
+
+//тут викликається метод Draw(), батьківського классу
+((Circle)o).Draw();
+
 Console.ReadLine();

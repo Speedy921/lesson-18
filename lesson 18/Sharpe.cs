@@ -13,7 +13,7 @@ namespace lesson_18
         { PetName = name; }
         public string PetName { get; set; }
         //Единий віртуальний метод
-        public  virtual void Draw()
+        public virtual void Draw()
         {
             Console.WriteLine("Inside Sharpe.Draw()");
         }
